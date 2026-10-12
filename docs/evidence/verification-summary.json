@@ -1,0 +1,86 @@
+{
+  "verified_date": "2026-10-12",
+  "version": "0.1.0",
+  "windows": {
+    "python": "3.14.6",
+    "tests": [
+      {
+        "tests": "30",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "3.712"
+      }
+    ]
+  },
+  "linux_container": {
+    "python_series": "3.12",
+    "tests": [
+      {
+        "tests": "30",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "4.476"
+      }
+    ],
+    "user": "non-root",
+    "network": "disabled",
+    "root_filesystem": "read-only"
+  },
+  "clean_installation": "passed; non-editable package in fresh venv",
+  "demo_windows": {
+    "verified_demo": true,
+    "tools_executed": 4,
+    "upstream_writes": 1,
+    "audit_events": 11,
+    "report": "C:\\Users\\matth\\OneDrive\\Documents\\ChatGPT\\AI Systems Engineering Lab\\ai-tool-coordination-gateway\\.gateway\\demos\\a650c783-ddfe-4e63-b14e-3cae08f7cd4c\\demo-report.json"
+  },
+  "demo_linux": {
+    "verified_demo": true,
+    "tools_executed": 4,
+    "upstream_writes": 1,
+    "audit_events": 11,
+    "report": "/data/demos/8b775e67-cee5-42e9-9f6a-438451e1ab43/demo-report.json"
+  },
+  "localhost_server": {
+    "live_server_verified": true,
+    "health_status": 200,
+    "unauthenticated_status": 401,
+    "forbidden_status": 403,
+    "discovered_tools": 4
+  },
+  "checks": {
+    "ruff_lint": "passed",
+    "ruff_format": "passed",
+    "pip_check": "passed",
+    "docker_build": "passed",
+    "remote_ci": "not run"
+  },
+  "source_sha256": {
+    ".github/workflows/ci.yml": "8061aa5b0ba41c610282970d6b959ffe97589bfccbc1cb4101d438f30f699ca8",
+    "docker-compose.yml": "57fd711872c04f6964eac60a5b8ece8233f6316cefb3581d80aa34c4359bda37",
+    "Dockerfile": "233fc5efc3969d7a3c3539068fb85916fb42dd498feaedd1b5251491699aa8cd",
+    "examples/repository/pyproject.toml": "12529bf9f31ef9011df68569b17f200a318d7e142447862d4bff5b6508dc883b",
+    "examples/repository/tests/test_demo.py": "5d4711ac286d421750b4096ee647313c9c9836de3edd544058d444a88cd17484",
+    "pyproject.toml": "f301b8832d4f50853d5eb8387af63d4f4e63f21e6e402207d0697a1e52d39944",
+    "requirements.lock": "e6a0357b951b9594ef38fddad886a650ea027b4b017447edafb924bc11d020f4",
+    "scripts/demo.py": "f3b07eef517fd36421bdfef6fc1fbe57879dc85aa6e40dd67190a3aef91214e9",
+    "scripts/smoke_server.py": "4ccce45754f3e3dc5a9a99f57896f54220d629d8faa9f6a7bab54163495594bc",
+    "src/tool_gateway/__init__.py": "f94e26408037bff862c36ed35660bb876b25b4d9358a94f2b1e65049a0de1779",
+    "src/tool_gateway/adapters.py": "d8b0380e3f1a98a654e78c6c1226a4c4df0bf874df18f07858657d1a104193cb",
+    "src/tool_gateway/app.py": "6ab21f1377a40628262e6645bf1a041cb5810137ffc9d782b48a2b90b0c92f09",
+    "src/tool_gateway/cli.py": "afcd31cccd4b50f2ebc81c0a38fe124ad52a275e9d286686629c78d8ea01da10",
+    "src/tool_gateway/models.py": "f6bd967a27a67335cdc95682c57587f99283a06cd0aeac7a5139ccb3cd359717",
+    "src/tool_gateway/store.py": "8d38a393683b6cd52009c71b888ce7892a6bec8030b65b8fa36afd4d0d62f0ec",
+    "tests/support.py": "644f1b79802cf21b6c5606e6da365e7163795ed2b97d121c559c9c1045050e6b",
+    "tests/test_gateway.py": "a8ca8e9ec4b22f297a12dbccb98044cb1f4a371691bb99c1e17558dfc1ff2c1d",
+    "tests/test_store_and_deadlines.py": "c81fae1131c859dd325f652376f1472a7675148d0aabc235485528a340f81eb5"
+  },
+  "limitations": [
+    "Single-worker budgets",
+    "Synchronous filesystem reads are not hard-deadline isolated",
+    "No remote CI or GitHub publication"
+  ],
+  "test_warning": "Starlette TestClient deprecates the pinned HTTPX compatibility path"
+}

@@ -1,0 +1,1 @@
+"""Independent tool coordination gateway."""

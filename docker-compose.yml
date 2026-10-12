@@ -1,0 +1,32 @@
+services:
+  demo:
+    build: .
+    entrypoint: [python, scripts/demo.py]
+    command: [--data-dir, /data/demos]
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 256m
+    cpus: 1
+    tmpfs: [/tmp:size=64m]
+    volumes: [gateway-data:/data]
+  gateway:
+    profiles: [serve]
+    build: .
+    environment:
+      GATEWAY_OPERATOR_TOKEN: ${GATEWAY_OPERATOR_TOKEN:-}
+      GATEWAY_ADMIN_TOKEN: ${GATEWAY_ADMIN_TOKEN:-}
+      GATEWAY_ROOT: /app/examples/repository
+      GATEWAY_DATA_DIR: /data/server
+      GATEWAY_UPSTREAM_URL: ${GATEWAY_UPSTREAM_URL:-}
+    ports: [127.0.0.1:8000:8000]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 256m
+    cpus: 1
+    tmpfs: [/tmp:size=64m]
+    volumes: [gateway-data:/data]
+volumes:
+  gateway-data:
