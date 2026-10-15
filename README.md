@@ -1,5 +1,14 @@
 # AI Tool Coordination Gateway
 
+## Start Here
+
+[Launch the complete employer demonstration on GitHub](https://github.com/texasbredmj/ai-engineering-portfolio#start-here).
+
+The public portfolio contains this project's runnable employer source, sample fixtures and verified demonstration, plus one Codespaces launch for all eight projects. No separate private-repository access is required. Run `python scripts/project_demo.py 2` from the portfolio Codespace to demonstrate this project.
+
+The instructions below describe this repository's standalone version. The integrated platform and its current verification evidence are maintained in the portfolio.
+
+
 Project 02 of the AI Systems Engineering Lab: a standalone FastAPI service that discovers,
 authorizes, invokes, and verifies typed tools. It does not depend on Project 01 at runtime.
 
